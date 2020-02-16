@@ -9,76 +9,23 @@ title: Justyna Ratajczak - Front-end and WordPress developer
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptas sequi nihil suscipit vel cumque, sunt pariatur ullam eligendi harum.</p>
   </div>
 
-  <article class="card">
-    <div class="card__desc">
-      <h3>To Tu To Tam</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium minus labore aspernatur voluptatem commodi a minima doloribus delectus, excepturi quis?</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio voluptatum enim praesentium labore cumque vel.</p>
-      <footer class="card__footer">
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Case study</a>
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Visit website</a>
-      </footer>
-    </div>
-    <div class="card__picture">
-      <picture class="card__picture--front">
-        <source srcset="./images/totutotam-front.webp" type="image/webp">
-        <source srcset="./images/totutotam-front@1x.jpg 1x, ./images/totutotam-front@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/totutotam-front@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-      <picture class="card__picture--back">
-        <source srcset="./images/totutotam-back.webp" type="image/webp">
-        <source srcset="./images/totutotam-back@1x.jpg 1x, ./images/totutotam-back@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/totutotam-back@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-    </div>
-  </article>
+  {% for project in collections.projects %}
+    
+    <article class="card">
+      <div class="card__desc">
+        <h3>{{ project.data.title }}</h3>
+        {{ project.data.description | markdownify | safe }}
+        <footer class="card__footer">
+          <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Case study</a>
+          <a href="{{ project.data.url | url }}" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Visit website</a>
+        </footer>
+      </div>
+      <div class="card__picture">
+        {% projectImage projects, project.fileSlug, project.data.title %}
+      </div>
+    </article>
 
-  <article class="card">
-    <div class="card__desc">
-      <h3>Bangor Region Chamber of Commerce</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium minus labore aspernatur voluptatem commodi a minima doloribus delectus, excepturi quis?</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio voluptatum enim praesentium labore cumque vel.</p>
-      <footer class="card__footer">
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Case study</a>
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Visit website</a>
-      </footer>
-    </div>
-    <div class="card__picture">
-      <picture class="card__picture--front">
-        <source srcset="./images/bangorregion-front.webp" type="image/webp">
-        <source srcset="./images/bangorregion-front@1x.jpg 1x, ./images/bangorregion-front@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/bangorregion-front@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-      <picture class="card__picture--back">
-        <source srcset="./images/bangorregion-back.webp" type="image/webp">
-        <source srcset="./images/bangorregion-back@1x.jpg 1x, ./images/bangorregion-back@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/bangorregion-back@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-    </div>
-  </article>
+  {% endfor %}
 
-  <article class="card">
-    <div class="card__desc">
-      <h3>Pocztowa Agencja Usług Finansowych</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium minus labore aspernatur voluptatem commodi a minima doloribus delectus, excepturi quis?</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio voluptatum enim praesentium labore cumque vel.</p>
-      <footer class="card__footer">
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Case study</a>
-        <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Visit website</a>
-      </footer>
-    </div>
-    <div class="card__picture">
-      <picture class="card__picture--front">
-        <source srcset="./images/pauf-front.webp" type="image/webp">
-        <source srcset="./images/pauf-front@1x.jpg 1x, ./images/pauf-front@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/pauf-front@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-      <picture class="card__picture--back">
-        <source srcset="./images/pauf-back.webp" type="image/webp">
-        <source srcset="./images/pauf-back@1x.jpg 1x, ./images/pauf-back@2x.jpg 2x" role="presentation" alt="To Tu To Tam" width="450">
-        <img src="./images/pauf-back@2x.jpg" role="presentation" alt="To Tu To Tam" width="450">
-      </picture>
-    </div>
-  </article>
 </section>
 
