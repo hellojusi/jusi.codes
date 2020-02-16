@@ -1,10 +1,8 @@
-// console.log('Hello world');
-
 document.querySelector('.theme-toggle').addEventListener('click', () => {
-  document.documentElement.classList.toggle('theme-dark');
-  if (localStorage.getItem('darkTheme') === null) {
-    localStorage.setItem('darkTheme', true);
+  document.documentElement.classList.toggle('theme-alt');
+  if (localStorage.getItem('theme-alt') === null) {
+    localStorage.setItem('theme-alt', true);
   } else {
-    localStorage.removeItem('darkTheme');
+    localStorage.removeItem('theme-alt');
   }
 });

@@ -4,11 +4,42 @@
 @import '_animations.scss';
 
 :root {
-  --bg-color: #ffffff;
-  --header-bg-color: #f7f8f9;
-  --text-color: #636d83;
-  --heading-color: #000000;
-  --link-hover-color: #636d8330;
+  --light-bg-color: #fff;
+  --light-header-bg-color: #f7f8f9;
+  --light-text-color: #636d83;
+  --light-heading-color: #000;
+  --light-link-hover-color: #636d8330;
+
+  --dark-bg-color: #2f333b;
+  --dark-header-bg-color: #22262f;
+  --dark-text-color: #c3bcc8;
+  --dark-heading-color: #fff;
+  --dark-link-hover-color: #636d8330;
+}
+
+:root {
+  --bg-color: var(--light-bg-color);
+  --header-bg-color: var(--light-header-bg-color);
+  --text-color: var(--light-text-color);
+  --heading-color: var(--light-heading-color);
+  --link-hover-color: var(--light-link-hover-color);
+}
+
+.theme-alt {
+  --bg-color: var(--dark-bg-color);
+  --header-bg-color: var(--dark-header-bg-color);
+  --text-color: var(--dark-text-color);
+  --heading-color: var(--dark-heading-color);
+  --link-hover-color: var(--dark-link-hover-color);
+
+  .theme-toggle {
+    &__icon--sun {
+      display: block;
+    }
+    &__icon--moon {
+      display: none;
+    }
+  }
 }
 
 body {
@@ -260,10 +291,11 @@ h3 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #2f333b;
-    --header-bg-color: #22262f;
-    --text-color: #c3bcc8;
-    --heading-color: #ffffff;
+    --bg-color: var(--dark-bg-color);
+    --header-bg-color: var(--dark-header-bg-color);
+    --text-color: var(--dark-text-color);
+    --heading-color: var(--dark-heading-color);
+    --link-hover-color: var(--dark-link-hover-color);
   }
   .theme-toggle {
     &__icon--sun {
@@ -273,22 +305,21 @@ h3 {
       display: none;
     }
   }
-}
 
-.theme-dark {
-  body {
-    --bg-color: #2f333b;
-    --header-bg-color: #22262f;
-    --text-color: #c3bcc8;
-    --heading-color: #ffffff;
-  }
+  .theme-alt {
+    --bg-color: var(--light-bg-color);
+    --header-bg-color: var(--light-header-bg-color);
+    --text-color: var(--light-text-color);
+    --heading-color: var(--light-heading-color);
+    --link-hover-color: var(--light-link-hover-color);
 
-  .theme-toggle {
-    &__icon--sun {
-      display: block;
-    }
-    &__icon--moon {
-      display: none;
+    .theme-toggle {
+      &__icon--sun {
+        display: none;
+      }
+      &__icon--moon {
+        display: block;
+      }
     }
   }
 }
