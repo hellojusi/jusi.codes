@@ -1,46 +1,10 @@
 @import '_reset.scss';
 @import '_fonts.scss';
+@import './settings/colors.scss';
 @import '_utilities.scss';
 @import '_animations.scss';
 
-:root {
-  --light-bg-color: #fff;
-  --light-header-bg-color: #f7f8f9;
-  --light-text-color: #636d83;
-  --light-heading-color: #000;
-  --light-link-hover-color: #636d8330;
-
-  --dark-bg-color: #2f333b;
-  --dark-header-bg-color: #22262f;
-  --dark-text-color: #c3bcc8;
-  --dark-heading-color: #fff;
-  --dark-link-hover-color: #636d8330;
-}
-
-:root {
-  --bg-color: var(--light-bg-color);
-  --header-bg-color: var(--light-header-bg-color);
-  --text-color: var(--light-text-color);
-  --heading-color: var(--light-heading-color);
-  --link-hover-color: var(--light-link-hover-color);
-}
-
-.theme-alt {
-  --bg-color: var(--dark-bg-color);
-  --header-bg-color: var(--dark-header-bg-color);
-  --text-color: var(--dark-text-color);
-  --heading-color: var(--dark-heading-color);
-  --link-hover-color: var(--dark-link-hover-color);
-
-  .theme-toggle {
-    &__icon--sun {
-      display: block;
-    }
-    &__icon--moon {
-      display: none;
-    }
-  }
-}
+@import './components/color-scheme-toggle.scss';
 
 body {
   background-color: var(--bg-color);
@@ -188,35 +152,6 @@ h3 {
   margin-top: 200px;
 }
 
-.theme-toggle {
-  margin-left: 3.125rem;
-  cursor: pointer;
-
-  &__icon {
-    fill: var(--heading-color);
-    transition: fill 0.2 ease-out;
-  }
-
-  &__icon--moon {
-    .svg-icon--stars {
-      display: none;
-    }
-
-    &:hover .svg-icon--stars {
-      display: block;
-      animation: 2s linear 0.2s infinite flash;
-    }
-  }
-
-  &__icon--sun {
-    display: none;
-
-    &:hover {
-      animation: 5s linear 0.3s infinite spin;
-    }
-  }
-}
-
 .site-footer {
   margin-top: auto;
 }
@@ -286,40 +221,5 @@ h3 {
     position: absolute;
     right: 0;
     margin-top: -3rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--dark-bg-color);
-    --header-bg-color: var(--dark-header-bg-color);
-    --text-color: var(--dark-text-color);
-    --heading-color: var(--dark-heading-color);
-    --link-hover-color: var(--dark-link-hover-color);
-  }
-  .theme-toggle {
-    &__icon--sun {
-      display: block;
-    }
-    &__icon--moon {
-      display: none;
-    }
-  }
-
-  .theme-alt {
-    --bg-color: var(--light-bg-color);
-    --header-bg-color: var(--light-header-bg-color);
-    --text-color: var(--light-text-color);
-    --heading-color: var(--light-heading-color);
-    --link-hover-color: var(--light-link-hover-color);
-
-    .theme-toggle {
-      &__icon--sun {
-        display: none;
-      }
-      &__icon--moon {
-        display: block;
-      }
-    }
   }
 }

@@ -1,0 +1,60 @@
+.no-js .color-scheme-toggle {
+  display: none;
+}
+
+.color-scheme-toggle {
+  margin-left: 3.125rem;
+  cursor: pointer;
+
+  &__icon {
+    fill: var(--heading-color);
+    transition: fill 0.2 ease-out;
+  }
+
+  &__icon--moon {
+    .svg-icon--stars {
+      display: none;
+    }
+
+    &:hover .svg-icon--stars {
+      display: block;
+      animation: 2s linear 0.2s infinite flash;
+    }
+  }
+
+  &__icon--sun:hover {
+    animation: 5s linear 0.3s infinite spin;
+  }
+}
+
+// light mode
+:root:not([data-color-scheme]),
+:root[data-color-scheme='light'] {
+  .color-scheme-toggle__icon--sun {
+    display: none;
+  }
+  .color-scheme-toggle__icon--moon {
+    display: block;
+  }
+}
+
+// dark mode
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color-scheme]) {
+    .color-scheme-toggle__icon--sun {
+      display: block;
+    }
+    .color-scheme-toggle__icon--moon {
+      display: none;
+    }
+  }
+}
+
+:root[data-color-scheme='dark'] {
+  .color-scheme-toggle__icon--sun {
+    display: block;
+  }
+  .color-scheme-toggle__icon--moon {
+    display: none;
+  }
+}
