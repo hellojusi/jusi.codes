@@ -1,15 +1,14 @@
 {
-  "name": "deventy",
-  "version": "1.3.0",
-  "description": "A minimal 11ty starter with modern tools",
-  "main": "index.js",
+  "name": "jusi.codes",
+  "version": "1.0.0",
+  "description": "Personal website of Justyna Ratajczak, an independent front-end and WordPress developer",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
-    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/*.scss --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode=development",
     "serve": "light-server -c .lightserverrc",
@@ -19,14 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
+    "url": "https://github.com/hellojusi/jusi.codes"
   },
-  "author": "",
+  "author": "Justyna Ratajczak",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ianrose/deventy/issues"
-  },
-  "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
     "light-server": "2.6.4"
   },

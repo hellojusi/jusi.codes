@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 79rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &--narrow {
+    max-width: 68rem;
+    & > * {
+      max-width: 46rem;
+    }
+  }
+}
+
+.site-section {
+  padding: 5rem 0;
+}

@@ -1,0 +1,50 @@
+body {
+  font-family: $font-family-base;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.667;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  @include transition-color;
+}
+
+h1 {
+  font-size: 5.25rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a:not([class]) {
+  color: var(--heading-color);
+  background: linear-gradient(to bottom, var(--link-hover-color) 0%, var(--link-hover-color) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 3px;
+  transition: color 0.2s ease-out, background-size 0.2s ease-out;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-size: 4px 100%;
+  }
+}

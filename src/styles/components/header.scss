@@ -1,0 +1,22 @@
+.header {
+  padding: 2rem 0;
+  background-color: var(--header-bg-color);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    svg {
+      fill: var(--heading-color);
+      transition: fill 0.2s ease-out;
+      vertical-align: middle;
+    }
+  }
+
+  @include media(sm) {
+    padding: 3rem 0;
+  }
+}

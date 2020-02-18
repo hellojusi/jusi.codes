@@ -1,0 +1,31 @@
+body {
+  color: var(--text-color);
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+:root:not([data-color-scheme]),
+:root[data-color-scheme='light'] {
+  --bg-color: #{$light-bg-color};
+  --header-bg-color: #{$light-header-bg-color};
+  --text-color: #{$light-text-color};
+  --heading-color: #{$light-heading-color};
+  --link-hover-color: #{$light-link-hover-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color-scheme]) {
+    --bg-color: #{$dark-bg-color};
+    --header-bg-color: #{$dark-header-bg-color};
+    --text-color: #{$dark-text-color};
+    --heading-color: #{$dark-heading-color};
+    --link-hover-color: #{$dark-link-hover-color};
+  }
+}
+
+:root[data-color-scheme='dark'] {
+  --bg-color: #{$dark-bg-color};
+  --header-bg-color: #{$dark-header-bg-color};
+  --text-color: #{$dark-text-color};
+  --heading-color: #{$dark-heading-color};
+  --link-hover-color: #{$dark-link-hover-color};
+}

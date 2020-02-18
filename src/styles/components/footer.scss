@@ -1,0 +1,7 @@
+.site-footer {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  padding: 4em 2em 3em;
+  font-size: 0.9375rem;
+}
