@@ -15,7 +15,7 @@ h3 {
   text-rendering: optimizeLegibility;
   margin-bottom: 1rem;
   color: var(--heading-color);
-  @include transition-color;
+  // @include transition-color;
 }
 
 h1 {
@@ -40,7 +40,7 @@ a:not([class]) {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 3px;
-  transition: color 0.2s ease-out, background-size 0.2s ease-out;
+  // transition: color 0.2s ease-out, background-size 0.2s ease-out;
   text-decoration: none;
 
   &:hover,
