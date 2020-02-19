@@ -1,6 +1,6 @@
 .site-footer {
   @extend .container;
-  padding: 2em;
+  padding: 2rem;
   font-size: 0.9375rem;
   text-align: center;
 
@@ -11,6 +11,6 @@
   @include media(sm) {
     display: flex;
     justify-content: space-between;
-    padding: 4em 2em;
+    padding: 6rem 2rem 4rem;
   }
 }

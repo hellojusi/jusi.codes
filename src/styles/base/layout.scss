@@ -13,7 +13,7 @@ body {
   padding-right: 2rem;
 
   &--narrow {
-    max-width: 68rem;
+    max-width: 70rem;
     & > * {
       max-width: 46rem;
     }
@@ -22,6 +22,10 @@ body {
 
 .site-section {
   padding: 3rem 0;
+
+  & + & {
+    padding-top: 0;
+  }
 
   @include media(sm) {
     padding: 5rem 0;

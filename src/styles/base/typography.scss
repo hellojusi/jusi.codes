@@ -12,7 +12,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   line-height: 1.4;
   font-weight: 800;
   letter-spacing: -1px;
@@ -43,6 +44,14 @@ h3 {
 
   @include media(sm) {
     font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+
+  @include media(sm) {
+    font-size: 1.5rem;
   }
 }
 

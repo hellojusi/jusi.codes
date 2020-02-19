@@ -3,29 +3,17 @@ layout: layouts/base.njk
 title: Justyna Ratajczak - Front-end and WordPress developer
 ---
 
+{% include 'partials/hero.njk' %}
+
 <section class="site-section projects">
   <div class="container container--narrow">
-    <h2>Selected projects</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptas sequi nihil suscipit vel cumque, sunt pariatur ullam eligendi harum.</p>
+    <h2>Get a glimpse of my work</h2>
+    <p>Since 2009 I've been working with agencies and designers to bring their ideas to life using modern development practices. Here's a small selection of short case studies detailing my latest projects.</p>
   </div>
 
-  {% for project in collections.projects %}
-    
-    <article class="card">
-      <div class="card__desc">
-        <h3>{{ project.data.title }}</h3>
-        {{ project.data.description | markdownify | safe }}
-        <footer class="card__footer">
-          <a href="#" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Case study</a>
-          <a href="{{ project.data.url | url }}" class="card__footer__link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M19.77 4.681L15.247.158a.452.452 0 10-.638.638l3.75 3.754H.452a.452.452 0 000 .905H18.36l-3.75 3.75a.452.452 0 10.638.637l4.523-4.523a.452.452 0 000-.638z"/></svg> Visit website</a>
-        </footer>
-      </div>
-      <div class="card__picture">
-        {% projectImage projects, project.fileSlug, project.data.title %}
-      </div>
-    </article>
-
-  {% endfor %}
+  {% include 'partials/projects.njk' %}
 
 </section>
+
+{% include 'partials/social.njk' %}
 

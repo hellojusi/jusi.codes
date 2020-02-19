@@ -2,10 +2,10 @@
 layout: 'layouts/base.njk'
 title: 'To Tu To Tam'
 description: >-
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium minus labore aspernatur voluptatem commodi a minima doloribus delectus, excepturi quis?
+  Aga and Tom created To Tu To Tam to document their travels around the world.
 
 
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio voluptatum enim praesentium labore cumque vel.
+  They asked me to migrate their old site from a travel blogging platform and build a completely custom WordPress solution.
 url: 'https://totutotam.blog'
 tags: projects
 ---
