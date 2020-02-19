@@ -21,5 +21,9 @@ body {
 }
 
 .site-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
+
+  @include media(sm) {
+    padding: 5rem 0;
+  }
 }

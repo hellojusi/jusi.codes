@@ -1,13 +1,17 @@
 .hero {
-  padding: 12rem 0 5rem;
+  padding: 4rem 0 3rem;
   background-color: var(--header-bg-color);
   // @include transition-bg;
+
+  @include media(sm) {
+    padding: 12rem 0 5rem;
+  }
 }
 
 .emoji {
   display: inline-block;
   margin-left: 0.5rem;
-  font-size: 3rem;
+  font-size: 1.8rem;
   position: relative;
   top: -4px;
 
@@ -15,5 +19,9 @@
     animation: wave 2s ease-in-out;
     transform-origin: 70% 70%;
     cursor: default;
+  }
+
+  @include media(sm) {
+    font-size: 3rem;
   }
 }

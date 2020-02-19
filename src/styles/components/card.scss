@@ -1,29 +1,24 @@
 .card {
-  max-width: 75rem;
-  height: 39rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(32, 1fr);
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
+  max-width: 79rem;
+  padding: 3rem 2rem 0;
+  margin: 3rem auto 0;
   background-color: var(--header-bg-color);
 
   &__desc {
-    grid-column: 4 / 13;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.875rem;
   }
 
   &__footer {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 
     &__link {
       color: var(--heading-color);
       text-decoration: none;
-      margin-right: 2.5rem;
+      margin-right: 1.5rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
 
       svg {
         fill: var(--heading-color);
@@ -39,22 +34,74 @@
   }
 
   &__picture {
+    margin-top: 2rem;
     position: relative;
-    grid-column: 15 / 32;
-    height: 100%;
+    height: 70vw;
+    overflow: hidden;
   }
 
-  &__picture--front {
+  &__picture--front,
+  &__picture--back {
+    display: block;
+    width: 60%;
+    max-width: 28rem;
     position: absolute;
-    left: 0;
-    margin-top: 4.5rem;
-    z-index: 2;
     box-shadow: 5px -5px 20px rgba(0, 0, 0, 0.07);
   }
 
+  &__picture--front {
+    left: 0;
+    z-index: 2;
+    margin-top: 0;
+  }
+
   &__picture--back {
-    position: absolute;
     right: 0;
-    margin-top: -3rem;
+    margin-top: 3rem;
+  }
+
+  @include media(sm) {
+    &__desc {
+      font-size: 1rem;
+    }
+  }
+
+  @include media(lg) {
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    max-width: 75rem;
+    height: 39rem;
+    margin-top: 5rem;
+    padding: 0;
+
+    &__desc {
+      grid-column: 4 / 13;
+    }
+
+    &__picture {
+      position: relative;
+      grid-column: 15 / 32;
+      overflow: initial;
+      height: 100%;
+
+      &--front {
+        margin-top: 4.5rem;
+      }
+
+      &--back {
+        margin-top: -3rem;
+      }
+    }
+
+    &__footer {
+      margin-top: 3rem;
+
+      &__link {
+        margin-right: 2.5rem;
+      }
+    }
   }
 }
