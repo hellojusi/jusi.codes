@@ -3,10 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+  <meta name="description" content="{{ siteData.description or description or metadata.description }}">
+  <meta name="author" content="{{ siteData.author }}">
+
   <title>{{ title }}</title>
+
   <link rel="stylesheet" href="/styles/main.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml">
+  {# <link rel="icon alternate" href="/images/favicons/favicon.png" type="image/png"> #}
+
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
