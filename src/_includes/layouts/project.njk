@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ siteData.description or description or metadata.description }}">
+  <meta name="author" content="{{ siteData.author }}">
+
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml">
+  {# <link rel="icon alternate" href="/images/favicons/favicon.png" type="image/png"> #}
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+  {% include 'partials/header.njk' %}
+
+  <div class="hero">
+    <div class="hero__intro container container--narrow">
+      <h2>{{ title }}</h2>
+      {{ intro | markdownify | safe }}
+    </div>
+  </div>
+
+  <article class="site-section project">
+    <div class="container container--narrow">
+
+      <ul class="project-summary">
+        <li class="project-summary__item project-summary__item--resp">
+          <h6>Responsibilities</h6>
+          {{ responsibilities }}
+        </li>
+        <li class="project-summary__item project-summary__item--company">
+          <h6>Company</h6>
+          {{ company | safe }}
+        </li>
+        <li class="project-summary__item project-summary__item--year">
+          <h6>Year</h6>
+          {{ year | safe }}
+        </li>
+        <li class="project-summary__item project-summary__item--status">
+          <h6>Status</h6>
+          {{ status | safe }}
+        </li>
+      </ul>
+
+      {{ content | safe }}
+
+      
+
+    </div>
+  </article>
+
+  {% include 'partials/social.njk' %}
+  
+  {% include 'partials/footer.njk' %}
+  <script src="/scripts/index.js"></script>
+</body>
+</html>

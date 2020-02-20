@@ -1,0 +1,35 @@
+.project-summary {
+  list-style: none;
+  margin-bottom: 2rem;
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__item--company {
+    grid-area: company;
+  }
+
+  &__item--year {
+    grid-area: year;
+  }
+
+  &__item--resp {
+    grid-area: resp;
+  }
+
+  &__item--status {
+    grid-area: status;
+  }
+
+  @include media(sm) {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-areas:
+      'resp year'
+      'company status';
+    grid-gap: 1rem;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
