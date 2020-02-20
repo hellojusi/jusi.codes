@@ -11,12 +11,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode('projectImage', function(content, slug, alt) {
     return `
     <picture class="card__picture--front">
-      <source srcset="./images/${slug}-front@1x.webp 1x, ./images/${slug}-front@2x.webp 2x," type="image/webp">
+      <source srcset="./images/${slug}-front@1x.webp 1x, ./images/${slug}-front@2x.webp 2x" type="image/webp">
       <source srcset="./images/${slug}-front@1x.jpg 1x, ./images/${slug}-front@2x.jpg 2x" role="presentation" alt="${alt}" width="450">
       <img src="./images/${slug}-front@2x.jpg" role="presentation" alt="${alt}" loading="lazy" width="450">
     </picture>
     <picture class="card__picture--back">
-      <source srcset="./images/${slug}-back.webp" type="image/webp">
+      <source srcset="./images/${slug}-back@1x.webp 1x, ./images/${slug}-back@2x.webp 2x " type="image/webp">
       <source srcset="./images/${slug}-back@1x.jpg 1x, ./images/${slug}-back@2x.jpg 2x" role="presentation" alt="${alt}" width="450">
       <img src="./images/${slug}-back@2x.jpg" role="presentation" alt="${alt}" loading="lazy" width="450">
     </picture>
