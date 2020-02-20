@@ -3,6 +3,10 @@
   background-color: var(--header-bg-color);
   // @include transition-bg;
 
+  p {
+    @extend .lead;
+  }
+
   @include media(sm) {
     padding: 12rem 0 5rem;
   }

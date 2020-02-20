@@ -13,9 +13,12 @@ body {
   padding-right: 2rem;
 
   &--narrow {
-    max-width: 70rem;
+    max-width: 66rem;
     & > * {
       max-width: 46rem;
+    }
+    & > .wide {
+      max-width: 79rem;
     }
   }
 }
@@ -29,5 +32,14 @@ body {
 
   @include media(sm) {
     padding: 5rem 0;
+  }
+}
+
+.wide {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  @include media(sm) {
+    margin-left: -6.5rem;
+    margin-right: -6.5rem;
   }
 }

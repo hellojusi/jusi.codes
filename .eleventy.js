@@ -1,11 +1,15 @@
-module.exports = function(eleventyConfig) {
-  const markdownIt = require('markdown-it');
-  const markdownItRenderer = new markdownIt();
+const markdownIt = require('markdown-it');
+const markdownItRenderer = new markdownIt();
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
+module.exports = function(eleventyConfig) {
   // replicare Jekyll's markdownify filter
   eleventyConfig.addFilter('markdownify', function(str) {
     return markdownItRenderer.render(str);
   });
+
+  // syntax highlighting (prism)
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // responsive images shortcode
   eleventyConfig.addShortcode('projectImage', function(content, slug, alt) {

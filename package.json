@@ -23,6 +23,7 @@
   "author": "Justyna Ratajczak",
   "license": "MIT",
   "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "light-server": "2.6.4"
   },
   "dependencies": {
