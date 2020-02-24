@@ -19,15 +19,17 @@ tags: projects
 
 #### Information architecture
 
-Tom and Aga's current site was using a travel blogging platform called Geoblog, which meant they had no control over how their content was organized and displayed.
+Tom and Aga's previous site was using a travel blogging platform called Geoblog, which meant they had no control over how their content was organized and displayed.
 
-They did like having posts grouped into trips wanted to keep a similar structure on their new site. Instead of creating a custom post type, I utilized WordPress' native posts and renamed the Categories default taxonomy (which they weren't going to use) to Trips. I added several custom fields using ACF Pro to implement additional features like taxonomy featured image and color.
+They did like having posts grouped into trips and wanted to keep a similar structure on their new site. Instead of creating a custom post type, I utilized WordPress' native posts and renamed the Categories default taxonomy (which they weren't going to use) to Trips. I added several custom fields using ACF Pro to implement additional features like taxonomy featured image and color.
+
+{% imgPng 'tttt-before-after', 'To Tu To Tam website: before and after the redesign', 'Trip page on the previous site vs. our custom WordPress theme. We included all the location information from the original site.', 'up' %}
 
 They also wanted to separate short weekend trips around Poland from their larger trips around the world. To that end, we created a separate section on the homepage and added a simple true/false custom field to the Trip taxonomy to be able to distinguish between the two trip types.
 
 #### Google Maps API integration
 
-One of the client's main feature requests was to display their posts on a map, showing a full travel route on the trip archive page and single pin on post pages. With ACF's built-in Google Map field I was able to use a single source to display location information in a variety of ways:
+One of the client's main feature requests was to display their posts on a map, showing a full travel route on the trip archive page and a single pin on post pages. With ACF's Google Map field I was able to use a single source to display location information in a variety of ways:
 
 - location markers for single posts
 - full route drawn on the map on travel page
@@ -52,7 +54,7 @@ function new_map($el) {
   };
 
   // create map
-  var map = new google.maps.Map($el[0], args);
+  var map = new google.maps.Map(\$el[0], args);
 
   // add a markers reference
   map.markers = [];
@@ -76,15 +78,15 @@ function new_map($el) {
 }
 
 /*
- *  This function will add a marker to the selected Google Map
+ * This function will add a marker to the selected Google Map
  *
- *  @param   $marker (jQuery element)
- *  @param   map (Google Map object)
- *  @return  n/a
+ * @param $marker (jQuery element)
+ * @param map (Google Map object)
+ * @return n/a
  */
 
 function add_marker($marker, map, tripCoordinates) {
-  var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng'));
+  var latlng = new google.maps.LatLng($marker.attr('data-lat'), \$marker.attr('data-lng'));
 
   // create marker
   var marker = new google.maps.Marker({

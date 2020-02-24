@@ -1,0 +1,29 @@
+.illustration {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  & > *:not(figcaption) {
+    background-color: var(--header-bg-color);
+  }
+
+  &__caption {
+    padding: 0 2rem;
+    font-size: 80%;
+    margin: 1rem 0;
+
+    &--up::before {
+      content: 'Above: ';
+      font-weight: 800;
+    }
+
+    &--down::before {
+      content: 'Below: ';
+      font-weight: 800;
+    }
+
+    @include media(sm) {
+      padding: 0 6.5rem;
+      font-size: 75%;
+    }
+  }
+}

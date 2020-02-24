@@ -2,6 +2,10 @@
   list-style: none;
   margin-bottom: 2rem;
 
+  &__title {
+    margin: 0;
+  }
+
   &__item {
     margin-bottom: 1rem;
   }
@@ -23,7 +27,7 @@
   }
 
   @include media(sm) {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     display: grid;
     grid-template-areas:
       'resp year'
@@ -31,6 +35,6 @@
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
   }
 }
