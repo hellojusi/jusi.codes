@@ -1,15 +1,30 @@
 const markdownIt = require('markdown-it');
-const markdownItRenderer = new markdownIt();
+const htmlmin = require('html-minifier');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function(eleventyConfig) {
   // replicare Jekyll's markdownify filter
+  const markdownItRenderer = new markdownIt();
   eleventyConfig.addFilter('markdownify', function(str) {
     return markdownItRenderer.render(str);
   });
 
   // syntax highlighting (prism)
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // minify html output
+  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+    if (outputPath.endsWith('.html')) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
+  });
 
   // responsive project images shortcode
   eleventyConfig.addShortcode('projectImage', function(content, slug, alt) {
