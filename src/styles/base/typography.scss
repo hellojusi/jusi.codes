@@ -88,11 +88,11 @@ p {
 
 a:not([class]) {
   color: var(--heading-color);
-  background: linear-gradient(to bottom, var(--link-hover-color) 0%, var(--link-hover-color) 100%);
+  background-image: linear-gradient(to bottom, var(--link-hover-color) 0%, var(--link-hover-color) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 4px 3px;
-  // transition: color 0.2s ease-out, background-size 0.2s ease-out;
+  background-size: 4px 10px;
+  transition: color 0.2s ease-out, background-size 0.2s ease-out;
   text-decoration: none;
 
   &:hover,
