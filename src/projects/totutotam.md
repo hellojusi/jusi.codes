@@ -17,6 +17,8 @@ tags: projects
 
 ### Unique features & challenges
 
+Every project is unique, has different requirements and often involves thinking outside of the box and hours of research. Here are some challenges I faced during the development process and features that make this one special.
+
 #### Information architecture
 
 Tom and Aga's previous site was using a travel blogging platform called Geoblog, which meant they had no control over how their content was organized and displayed.
@@ -34,9 +36,11 @@ One of the client's main feature requests was to display their posts on a map, s
 - location markers for single posts
 - full route drawn on the map on travel page
 - SVG flag and location name displayed in the meta section of a post
-- country marked on the homepage map using the [GeoChart API](https://developers.google.com/chart/interactive/docs/gallery/geochart)
+- country marked on the homepage map using the [amCharts](https://www.amcharts.com/) library
 
-```js
+{% imgPng 'tttt-map', 'To Tu To Tam website: location of post displayed with Google Maps', 'Single location information is pulled into several components, including Google Maps, location name and SVG flag.', 'up' %}
+
+<!-- ```js
 /*
  *  This function will render a Google Map onto the selected jQuery element
  *
@@ -86,7 +90,7 @@ function new_map($el) {
  */
 
 function add_marker($marker, map, tripCoordinates) {
-  var latlng = new google.maps.LatLng($marker.attr('data-lat'), \$marker.attr('data-lng'));
+  var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng'));
 
   // create marker
   var marker = new google.maps.Marker({
@@ -104,7 +108,7 @@ function add_marker($marker, map, tripCoordinates) {
   };
   tripCoordinates.push(coords);
 }
-```
+``` -->
 
 ### Client testimonial
 

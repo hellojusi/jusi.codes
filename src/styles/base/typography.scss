@@ -34,6 +34,10 @@ h6 {
   article & {
     margin: 3rem 0 2rem;
   }
+
+  & + & {
+    margin-top: 0;
+  }
 }
 
 h1 {
@@ -109,4 +113,8 @@ cite {
   font-style: normal;
   font-size: smaller;
   text-transform: uppercase;
+}
+
+ul {
+  list-style-position: inside;
 }
