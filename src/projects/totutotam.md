@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/project.njk'
+date: 2020-02-01
 title: 'To Tu To Tam'
 description: >-
   Aga and Tom created To Tu To Tam to document their travels around the world.

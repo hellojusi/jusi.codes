@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/base.njk'
+date: 2020-02-02
 title: 'Pocztowa Agencja Usług Finansowych'
 description: >-
   PAUF is a branch of Poczta Polska (Polish Post), providing a variety of insurance products. They needed a new, modern website to clearly explain their services.

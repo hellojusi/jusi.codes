@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/project.njk'
+date: 2020-02-03
 title: 'Bangor Region Chamber of Commerce'
 description: >-
   During my time working with [RainStorm](https://rainstorminc.com), I built a new site for one of the largest Chambers in Maine.
