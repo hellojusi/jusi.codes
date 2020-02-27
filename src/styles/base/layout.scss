@@ -26,12 +26,20 @@ body {
 .site-section {
   padding: 3rem 0;
 
-  & + & {
+  & + &:not(.site-section--social) {
     padding-top: 0;
   }
 
   @include media(sm) {
     padding: 5rem 0;
+  }
+
+  &--social {
+    padding: 3rem 0 3rem;
+
+    @include media(sm) {
+      padding: 10rem 0 0;
+    }
   }
 }
 

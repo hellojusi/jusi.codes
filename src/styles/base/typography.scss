@@ -104,17 +104,15 @@ a:not([class]) {
 }
 
 blockquote {
-  padding-left: 2rem;
+  padding: 1rem 2rem;
   border-left: 1rem solid var(--header-bg-color);
 }
 
 cite {
   margin-top: 2rem;
   display: block;
-  text-align: right;
   font-style: normal;
   font-size: smaller;
-  text-transform: uppercase;
 }
 
 ul {

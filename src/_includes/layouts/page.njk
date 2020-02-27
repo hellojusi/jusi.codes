@@ -8,7 +8,7 @@
     <div class="hero__intro container container--narrow">
       <h1>
         {{ title | safe }} 
-        {%- if emoji -%}<span class="emoji emoji--jusi">{{ emoji }}</span>{%- endif emoji -%}
+        {%- if emoji -%}<span class="emoji emoji--jusi">{{ emoji }}</span>{%- endif -%}
       </h1>
       {{ intro | markdownify | safe }}
     </div>
