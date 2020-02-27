@@ -4,7 +4,14 @@
 
   {% include 'partials/header.njk' %}
 
-  <article class="site-section">
+  <div class="hero">
+    <div class="hero__intro container container--narrow">
+      <h1>{{ title | safe }}</h1>
+      {{ intro | markdownify | safe }}
+    </div>
+  </div>
+
+  <article class="page">
     <div class="container container--narrow">
       {{ content | safe }}
     </div>

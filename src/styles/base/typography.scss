@@ -4,6 +4,7 @@ body {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.667;
+  letter-spacing: -0.1px;
 
   @include media(sm) {
     font-size: 1.125rem;
@@ -27,12 +28,11 @@ h6 {
   font-weight: 800;
   letter-spacing: -1px;
   text-rendering: optimizeLegibility;
-  margin-bottom: 1rem;
+  margin: 0 0 1.5rem;
   color: var(--heading-color);
-  // @include transition-color;
 
   article & {
-    margin: 3rem 0 2rem;
+    margin: 3rem 0 1.5rem;
   }
 
   & + & {
@@ -116,5 +116,15 @@ cite {
 }
 
 ul {
-  list-style-position: inside;
+  margin-left: 1.25rem;
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.updated {
+  margin-top: 2rem;
+  font-size: smaller;
 }

@@ -16,51 +16,50 @@ responsibilities: front-end development (HTML, CSS, JS), WordPress implementatio
 tags: projects
 ---
 
-### Features
+### Unique features & challenges
+
+Every project is unique, has different requirements and often involves thinking outside of the box and hours of research. Here are some challenges I faced during the development process and features that make this one special.
 
 #### Ad management
 
-The Chamber needed a dedicated space for online advertising and sponsorships. I leveraged custom post types and Advanced Custom Fields Pro to create a simple ad management system that suits their specific needs. Different zones can be selected per ad, allowing high level of ad placement customization.
+The Chamber needed a dedicated space for online advertising and sponsorships. I leveraged custom post types and Advanced Custom Fields Pro to create a simple ad management system that suits their specific needs.
+
+The main requirement was to create several ad zones throughout the site, as well as have an option to create a site-wide campaign with a single ad. I created the Zones custom field in ACF with a predefined list of zones and customized it further with a filter – once a zone is selected and ad published, that zone becomes unavailable to choose for other ads.
+
+{% imgPng 'bangor-ads', 'Bangor Region Chamber of Commerce ad management', 'Different zones can be selected per ad, allowing high level of ad placement customization.', 'up' %}
+
+I also added a simple function that warns admins about selected site-wide campaigns when creating a new ad.
 
 ```php
 /**
- * Displays an ad in specified zone
- * Example: rsc_display_ads_in_zone( 'homepage-top' )
- *
- * @param string $zone
- * @return void
+ * Displays a notification in the admin if there is a site-wide ad active elsewhere.
  */
-function rsc_display_ads_in_zone( $zone ) {
+function rsc_invisible_ad_admin_notice( $post ) {
+
   $args = array(
-    'posts_per_page' => 1,
-    'post_type' => 'rsc-ads',
+    'post_type'	=> 'rsc-ads',
     'post_status' => 'publish',
     'meta_query' => array(
       array(
-        'key' => 'ad_zones',
-        'value'	=> $zone,
-        'compare'	=> 'LIKE'
+        'key'	=> 'ad_all_zones',
+        'value' => '1',
+        'compare'	=> '=='
       )
     )
   );
 
-  $ads = new WP_Query( $args );
+  $sitewide = get_posts($args);
 
-  if ( $ads->have_posts() ) :
-    echo '<div class="sidebar-ads">';
+  if ( $post->post_type == 'rsc-ads' && !empty( $sitewide ) && !get_field( 'ad_all_zones', $post->ID ) ) {
 
-    while ( $ads->have_posts() ) {
-      $ads->the_post();
-      echo '<a href="' . get_field( 'ad_url' ) . '">';
-        echo wp_get_attachment_image( get_field( 'ad_image' ), 'full', '', '' );
-      echo '</a>';
-    }
-
+    echo '<div class="notice error rsc-ad-notice">';
+      echo '<p>This ad will not show because you have a <strong>site-wide</strong> ad active.</p>';
     echo '</div>';
-  }
 
-  wp_reset_query();
+  endif;
 }
+
+add_action( 'edit_form_after_title', 'rsc_invisible_ad_admin_notice' );
 ```
 
 #### ChamberMaster integration

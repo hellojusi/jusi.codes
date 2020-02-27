@@ -5,6 +5,10 @@
 
   p {
     @extend .lead;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   @include media(sm) {
@@ -25,7 +29,15 @@
     cursor: default;
   }
 
+  &--jusi:hover {
+    animation: none;
+  }
+
   @include media(sm) {
     font-size: 3rem;
+
+    &--jusi {
+      font-size: 3.5rem;
+    }
   }
 }

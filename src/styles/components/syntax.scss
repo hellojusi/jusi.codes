@@ -63,7 +63,6 @@ pre {
   }
 }
 
-:not(pre) > code,
 pre {
   color: white;
   // background: #011627;
@@ -72,9 +71,14 @@ pre {
 }
 
 :not(pre) > code {
-  padding: 0.1em;
-  border-radius: 0.3em;
+  padding: 2px 5px 3px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
   white-space: normal;
+  font-family: $font-family-monospace;
+  background-color: var(--header-bg-color);
+  color: var(--heading-color);
+  font-size: smaller;
 }
 
 .token.comment,

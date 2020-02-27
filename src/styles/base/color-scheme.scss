@@ -5,6 +5,7 @@
   --text-color: #{$light-text-color};
   --heading-color: #{$light-heading-color};
   --link-hover-color: #{$light-link-hover-color};
+  --border-color: #{$light-border-color};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +15,7 @@
     --text-color: #{$dark-text-color};
     --heading-color: #{$dark-heading-color};
     --link-hover-color: #{$dark-link-hover-color};
+    --border-color: #{$dark-border-color};
   }
 }
 
@@ -23,6 +25,7 @@
   --text-color: #{$dark-text-color};
   --heading-color: #{$dark-heading-color};
   --link-hover-color: #{$dark-link-hover-color};
+  --border-color: #{$dark-border-color};
 }
 
 body {
