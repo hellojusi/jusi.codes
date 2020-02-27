@@ -6,8 +6,30 @@
   margin-left: 0;
 
   &__link {
+    display: inline-block;
     color: var(--heading-color);
     text-decoration: none;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 1.45em;
+
+    span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover span,
+    &:focus span {
+      transform: translateY(-100%);
+    }
   }
 
   @include media(sm) {

@@ -12,6 +12,27 @@
     margin-right: 1.5rem;
     color: var(--heading-color);
     text-decoration: none;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 1.25em;
+
+    span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover span,
+    &:focus span {
+      transform: translateY(-100%);
+    }
   }
 
   @include media(sm) {
@@ -21,35 +42,4 @@
       margin-right: 3.125rem;
     }
   }
-
-  //   & a {
-  //     overflow: hidden;
-  //     padding: 0 4px;
-  //     height: 1.2em;
-  //   }
-
-  //   & a span {
-  //     position: relative;
-  //     display: inline-block;
-  //     -webkit-transition: -webkit-transform 0.3s;
-  //     -moz-transition: -moz-transform 0.3s;
-  //     transition: transform 0.3s;
-  //   }
-
-  //   & a span::before {
-  //     position: absolute;
-  //     top: 100%;
-  //     content: attr(data-hover);
-  //     // font-weight: 800;
-  //     -webkit-transform: translate3d(0, 0, 0);
-  //     -moz-transform: translate3d(0, 0, 0);
-  //     transform: translate3d(0, 0, 0);
-  //   }
-
-  //   & a:hover span,
-  //   & a:focus span {
-  //     -webkit-transform: translateY(-100%);
-  //     -moz-transform: translateY(-100%);
-  //     transform: translateY(-100%);
-  //   }
 }

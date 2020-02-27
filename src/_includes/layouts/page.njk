@@ -6,7 +6,10 @@
 
   <div class="hero">
     <div class="hero__intro container container--narrow">
-      <h1>{{ title | safe }}</h1>
+      <h1>
+        {{ title | safe }} 
+        {%- if emoji -%}<span class="emoji emoji--jusi">{{ emoji }}</span>{%- endif emoji -%}
+      </h1>
       {{ intro | markdownify | safe }}
     </div>
   </div>

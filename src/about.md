@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
-title: About me <span class="emoji emoji--jusi">👩🏼‍💻</span>
+title: About me
+emoji: 👩🏼‍💻
 intro: Hi again, I'm Justyna. I'm a thirty-something freelance front-end and WordPress developer living in 🇵🇱 Wrocław, Poland.
 ---
 
