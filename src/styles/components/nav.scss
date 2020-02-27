@@ -5,6 +5,7 @@
 }
 
 .nav {
+  display: flex;
   font-size: 1rem;
 
   &__item {
@@ -14,7 +15,7 @@
     text-decoration: none;
     overflow: hidden;
     padding: 0 4px;
-    height: 1.25em;
+    height: 1.55em;
 
     span {
       position: relative;

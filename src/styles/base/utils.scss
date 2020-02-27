@@ -1,3 +1,7 @@
 .visually-hidden {
   @include visually-hidden;
 }
+
+*:focus {
+  outline: 3px solid var(--link-color);
+}
