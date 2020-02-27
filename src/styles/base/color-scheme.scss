@@ -4,7 +4,9 @@
   --header-bg-color: #{$light-header-bg-color};
   --text-color: #{$light-text-color};
   --heading-color: #{$light-heading-color};
+  --link-color: #{$light-link-color};
   --link-hover-color: #{$light-link-hover-color};
+  --link-active-color: #{$light-link-active-color};
   --border-color: #{$light-border-color};
 }
 
@@ -14,7 +16,9 @@
     --header-bg-color: #{$dark-header-bg-color};
     --text-color: #{$dark-text-color};
     --heading-color: #{$dark-heading-color};
+    --link-color: #{$dark-link-color};
     --link-hover-color: #{$dark-link-hover-color};
+    --link-active-color: #{$dark-link-active-color};
     --border-color: #{$dark-border-color};
   }
 }
@@ -24,7 +28,9 @@
   --header-bg-color: #{$dark-header-bg-color};
   --text-color: #{$dark-text-color};
   --heading-color: #{$dark-heading-color};
+  --link-color: #{$dark-link-color};
   --link-hover-color: #{$dark-link-hover-color};
+  --link-active-color: #{$dark-link-active-color};
   --border-color: #{$dark-border-color};
 }
 
