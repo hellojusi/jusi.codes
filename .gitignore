@@ -62,6 +62,8 @@ typings/
 
 # eleventy.js build output
 dist
+src/styles/main.css
 
 # Mac OS
 .DS_Store
+
