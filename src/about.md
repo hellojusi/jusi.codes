@@ -15,7 +15,7 @@ Other web-related topics I'm interested in include web performance, accesibility
 
 ### WordPress
 
-I've been using WordPress since before we had post thumbnails and have been a freelance developer for over 10 years now. I specialize in building custom WordPress websites for small businesses and
+I've been using WordPress since before we had post thumbnails and have been a freelance developer for over 10 years now. I specialize in building custom WordPress websites for a variety of clients – from small businesses and non-profits to large e-commerce sites.
 
 I enjoy working with creative agencies and designers who need someone to bring their ideas to life, and pride myself in clean, semantic, maintainable code. All of my custom work strictly follows the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/), uses functions, filters and actions to ensure the project is stable, secure and future-proof.
 
