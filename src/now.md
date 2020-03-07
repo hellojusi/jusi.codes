@@ -14,6 +14,6 @@ intro: Inspired by [Derek Sivers](https://sivers.org/nowff), this page lists my 
 #### Currently reading
 
 - [The Bullet Journal Method](https://www.goodreads.com/book/show/39071691-the-bullet-journal-method?from_search=true&qid=JHkihmXmEm&rank=1) by Ryder Carroll
-- [The New CSS Layout](https://abookapart.com/products/the-new-css-layout) by Rachel Andrews
+- [The New CSS Layout](https://abookapart.com/products/the-new-css-layout) by Rachel Andrew
 
 <p class="updated">Updated: Feb 2020</p>
