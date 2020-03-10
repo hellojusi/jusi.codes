@@ -13,7 +13,7 @@ intro: Inspired by [Derek Sivers](https://sivers.org/nowff), this page lists my 
 
 #### Currently reading
 
-- [The Bullet Journal Method](https://www.goodreads.com/book/show/39071691-the-bullet-journal-method?from_search=true&qid=JHkihmXmEm&rank=1) by Ryder Carroll
+- [Blood of Elves](https://www.goodreads.com/book/show/6043781-blood-of-elves?from_search=true&qid=XwDXeAb5gP) by Andrzej Sapkowski (for the umpteenth time)
 - [The New CSS Layout](https://abookapart.com/products/the-new-css-layout) by Rachel Andrew
 
-<p class="updated">Updated: Feb 2020</p>
+<p class="updated">Updated: Mar 2020</p>
